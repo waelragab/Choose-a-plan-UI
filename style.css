@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-size: 20px;
+}
+.outer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 165vh;
+    width: 100vw;
+    background-color: #191B1D;
+    color: #fff;
+}
+.title{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-color: #BC1E4A;
+    height: 100px;
+    padding: 20px 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.4s ease-in-out;
+}
+.choose-plan, .picker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choose-plan{
+    margin-bottom: 50px;
+}
+.choose-plan h2{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.picker{
+    flex-direction: row;
+    min-width: 500px;
+    text-transform: capitalize;
+}
+.picker .chooser{
+    width: 70px;
+    height: 40px;
+    background-color: #BC1E4A;
+    position: relative;
+    border-radius: 20px;
+    margin: 0 15px;
+    padding-left: 5px;
+}
+.picker .chooser .circle{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: left 0.3s ease-in-out;
+}
+.inner-container{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.inner-container .box{
+    background-color: #22262C;
+    height: 600px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+    height: auto;
+}
+.box p{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.box h1{
+    margin-bottom: 50px;
+}
+.box ul{
+    margin-bottom: 100px;
+}
+.box li{
+    margin: 15px 0;
+    list-style: none;
+}
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #BC1E4A; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.box .myBtn{
+    width: 65%;
+    padding: 20px 20px;
+    background-color: transparent;
+    border: 1px solid #BC1E4A;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.box .myBtn:hover{
+    background-color: #BC1E4A;
+    color: #fff;
+}
+.dropdown{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.dropdown button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+.dropdown .myBtn{
+    width: 100%;
+    border-radius: 0;
+    border-color: #fff;
+    margin: 0;
+
+}
+.dropdown .myBtn:hover{
+    background-color: transparent;
+}
+.dropdown-menu{
+    width: 100%;
+    background-color: #BC1E4A;
+    color: #fff;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.dropdown-menu a{
+    color: #fff;
+    padding: 20px;
+}
+.box small{
+    color: #BC1E4A;
+    margin: 3px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+@media(max-width: 900px){
+    .outer-container{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+    .title{
+        margin-bottom: 50px;
+    }
+    .inner-container{
+        width: 60vw;
+        grid-template-columns: 1fr;
+    }
+    .box{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .choose-plan{
+    margin-bottom: 50px;
+    margin-top: 200px;
+    }
+    .dropdown{
+        width: 70%;
+    }
+}
